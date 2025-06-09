@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ágora - Dashboard</title>
+  <link rel="icon" href="/assets/icon.png" type="image/png" />
+  
+  <!-- Estilos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="/assets/hamburguer.css" rel="stylesheet" />
+  <link href="menu.css" rel="stylesheet" />
+  <link href="dashboard.css" rel="stylesheet" />
+
+  <!-- Scripts -->
+  <script src="/MenuLateral.js" type="module" defer></script>
+  <script src="menu.js" type="module" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="/home/SuasAnalises/DetalhesPlanilha/Analises/dashboard/atualizacao.js" type="module" defer></script>
+  <script src="dashboard.js" type="module" defer></script>
+</head>
+
+<body class="dashboard">
+  <!-- Navegação lateral ou superior -->
+  <header class="container">
+    <nav class="menu">
+      <a class="menu_analises">Menu das Análises</a>
+      <a href="./dashboard.html?planilha=">Dashboard</a>
+      <a href="./agora.html?planilha=">Socioeconômico</a>
+      <a href="./evocacoes.html?planilha=">Evocações</a>
+      <a href="./formaragora.html?planilha=">Formar Ágoras</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container" id="dashboard-content">
+    <!-- Conteúdo será injetado dinamicamente pelo JS -->
+  </main>
+</body>
+</html>

@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
 /* Estilos gerais */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   background: url('/assets/fundo_cadastro.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
@@ -30,8 +32,6 @@ h1 {
   z-index: 1;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
-
 /* Container dos botões */
 #planilhasContainer {
   width: 90%;
@@ -51,7 +51,6 @@ h1 {
   padding: 20px 25px;
   margin: 14px 0;
   font-size: 1.8rem;
-  font-family: 'Ubuntu', sans-serif;
   color: #ffffff;
   background-color: #2a716e;
   border: none;
@@ -59,6 +58,9 @@ h1 {
   cursor: pointer;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s, transform 0.2s;
+  overflow: hidden; /* Esconde o texto que ultrapassar o limite do botão */
+  text-overflow: ellipsis; /* Adiciona as reticências se o texto for muito longo */
+  white-space: nowrap; /* Impede o texto de quebrar em múltiplas linhas */
 }
 
 /* Botão amarelo em destaque */
@@ -131,3 +133,11 @@ h1 {
   }
 }
 
+@media (max-width: 768px) {
+  .planilha-button {
+    padding: 24px 28px;
+    font-size: 1.2rem;
+    max-width: 90%;
+    word-wrap: break-word; /* Permite a quebra de palavras longas em diferentes linhas */
+  }
+}
